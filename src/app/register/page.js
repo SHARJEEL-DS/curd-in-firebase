@@ -5,9 +5,8 @@ import { database } from '../../../firebase';
 import {useRouter} from 'next/navigation'
 import Link from 'next/link';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
-
 const page = () => {
- 
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
@@ -34,40 +33,40 @@ const page = () => {
               console.log("Something went wrong with registration: " + error);
           }
     }
-  
-    return (
-        <div className='flex flex-col items-center justify-center h-screen'>
-          <form className='flex flex-col items-center justify-center w-4/12 gap-4 px-10 py-5 bg-gray-400'>
-            <h2 className='text-xl font-bold '>Registration</h2>
-            <input 
-              type="email" 
-              placeholder='Enter Email' 
-              className='w-full px-4 py-1 border-none outline-none' 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-  
-            <input 
-              type="password" 
-              placeholder='Enter Password' 
-              className='w-full px-4 py-1 border-none outline-none' 
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-  
-            <button 
-              type='submit'
-              className='w-full p-2 text-white bg-blue-500 rounded-full'
-              onClick={saveData}
-            >Insert</button>
-  
-            ALready Have an account ? 
-            <Link href={"/login"}>Login</Link>
-          </form>
-  
-        </div>
-    )
-  }
-  
+  return (
+    <div class=" h-screen bg-gray-50 pt-5 ">
+      <p className='mb-4 text-5xl font-bold text-center'>SignUp </p>
+    <div class="flex bg-slate-300  rounded-lg shadow-lg overflow-hidden mx-auto my-auto max-w-sm lg:max-w-4xl">
+          <div class="hidden lg:block lg:w-1/2 bg-cover" style={{"background-image":"url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"}}></div>
+          <div class="w-full p-8 lg:w-1/2">
+              <h2 class="text-2xl font-semibold text-gray-700 text-center">Brand</h2>
+              <p class="text-xl text-gray-600 text-center">Welcome back!</p>
+            
+              <div class="mt-4">
+                  <label class="block text-gray-700 text-sm font-bold mb-2 ">Email Address</label>
+                  <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="email" value={email}
+              onChange={(e) => setEmail(e.target.value)}/>
+              </div>
+              <div class="mt-4">
+                  <div class="flex justify-between">
+                      <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                      <a href="#" class="text-xs text-gray-500">Forget Password?</a>
+                  </div>
+                  <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="password"value={password}
+              onChange={(e) => setPassword(e.target.value)}/>
+              </div>
+              <div class="mt-8">
+                  <button class="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600" onClick={saveData}>Sign Up</button>
+              </div>
+              <div class="mt-4 flex items-center justify-between">
+                  <span class="border-b w-1/5 md:w-1/4"></span>
+                  <Link href="/login" class="text-xs text-gray-500 uppercase">or Login</Link>
+                  <span class="border-b w-1/5 md:w-1/4"></span>
+              </div>
+          </div>
+      </div>
+  </div>
+  )
+}
 
 export default page
