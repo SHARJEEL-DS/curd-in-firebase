@@ -48,7 +48,7 @@ const Login = () => {
 
     
   return (
-    <div className="h-screen pt-5 bg-gray-50">kjl
+    <div className="h-screen pt-5 bg-gray-50">
       <p classNameName='mb-4 text-5xl font-bold text-center'> </p>
     <div className="flex max-w-sm mx-auto my-auto overflow-hidden rounded-lg shadow-lg bg-slate-300 lg:max-w-4xl">
           <div className="hidden bg-cover lg:block lg:w-1/2" style={{"background-image":"url('https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80"}}></div>
