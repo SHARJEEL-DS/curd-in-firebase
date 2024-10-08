@@ -5,7 +5,7 @@ import { database } from '../../../firebase';
 import {useRouter} from 'next/navigation'
 import Link from 'next/link';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
-const page = () => {
+const Page = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -69,4 +69,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

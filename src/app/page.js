@@ -11,7 +11,7 @@ import Narbar from './component/Narbar';
 import WelcomeCard from './component/WelcomeCard';
 import CheckInSlider from './component/CheckInSlider';
 
-export default function Home() {
+export default function Page() {
   const router = useRouter();
   const [loading, setLoading] = useState(true); // Loading state to ensure redirection occurs after checking
 
